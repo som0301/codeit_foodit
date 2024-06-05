@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FoodList from "./FoodList";
 import { getFoods } from "../api";
+import FoodForm from "./FoodForm";
 
 const LIMIT = 10;
 
@@ -62,6 +63,7 @@ function App() {
 
   return (
     <div>
+      <FoodForm />
       <button onClick={handleNewestClick}>최신순</button>
       <button onClick={handleCalorieClick}>칼로리순</button>
       <form onSubmit={handleSearchSubmit}>
